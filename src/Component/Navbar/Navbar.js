@@ -31,11 +31,11 @@ export const Navbar = () => {
 
         {/* Social Icons */}
         <div className="col-12 col-md-4 mt-2 mt-md-0 d-flex justify-content-center justify-content-md-end gap-3">
-          <a href="#" className="text-muted"><FaFacebookF /></a>
-          <a href="#" className="text-muted"><FaLinkedinIn /></a>
-          <a href="#" className="text-muted"><FaTwitter /></a>
-          <a href="#" className="text-muted"><FaInstagram /></a>
-          <a href="#" className="text-muted"><FaVimeoV /></a>
+          <a href="/fa" className="text-muted"><FaFacebookF /></a>
+          <a href="/fa" className="text-muted"><FaLinkedinIn /></a>
+          <a href="/fa" className="text-muted"><FaTwitter /></a>
+          <a href="/fa" className="text-muted"><FaInstagram /></a>
+          <a href="/fa" className="text-muted"><FaVimeoV /></a>
         </div>
       </div>
     </div>

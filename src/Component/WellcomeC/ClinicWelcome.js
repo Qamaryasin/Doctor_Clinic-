@@ -29,7 +29,7 @@ const ClinicWelcome = () => {
               Subdue whales void god which living don't midst lesser yielding over
               lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were the boring.
             </p>
-            <a href="#" className="learn-more-btn mt-2">LEARN MORE</a>
+            <a href="/learn-more" className="learn-more-btn mt-2">LEARN MORE</a>
           </div>
         </div>
       </div>

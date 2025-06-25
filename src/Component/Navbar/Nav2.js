@@ -53,7 +53,7 @@ const MedinoNavbar = () => {
   return (
     <Navbar bg="light" expand="lg" className="shadow-sm py-3 sticky-top">
       <Container>
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
+        <Navbar.Brand href="/home" className="d-flex align-items-center">
           <img
             src="./Image/logo1.png"
             alt="Medino logo"
