@@ -1,31 +1,3 @@
-// import react from "react";
-// import './Navbar.scss'
-// export const Navbar = () =>{
-// return(
-//     <>
-// <div className="Main_div">
-// <div className="first_div">
-// <ul>
-//     <li>Call</li>
-//     <li>Email</li>
-//     <li>Loction</li>
-
-// </ul>
-// </div>
-// <div className="Second_div">
-// <ul>
-//     <li>1</li>
-//     <li>2</li>
-//     <li>3</li>
-//     <li>4</li>
-
-// </ul>
-// </div>
-// </div>
-//     </>
-// )
-// }
-
 import React from "react";
 import './Navbar.scss';
 import {

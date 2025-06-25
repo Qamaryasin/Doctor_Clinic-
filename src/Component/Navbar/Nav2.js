@@ -67,9 +67,9 @@ const MedinoNavbar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-uppercase fw-semibold">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#departments">Departments</Nav.Link>
-            <Nav.Link href="#doctors">Doctors</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/departments">Departments</Nav.Link>
+            <Nav.Link href="/doctors">Doctors</Nav.Link>
 
             {/* Pages Dropdown */}
             <NavDropdown
@@ -79,8 +79,8 @@ const MedinoNavbar = () => {
               onMouseEnter={() => setShowPages(true)}
               onMouseLeave={() => setShowPages(false)}
             >
-              <NavDropdown.Item href="#action1">Page 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action2">Page 2</NavDropdown.Item>
+              <NavDropdown.Item href="/action1">Page 1</NavDropdown.Item>
+              <NavDropdown.Item href="/action2">Page 2</NavDropdown.Item>
             </NavDropdown>
 
             {/* Blog Dropdown */}
@@ -91,11 +91,11 @@ const MedinoNavbar = () => {
               onMouseEnter={() => setShowBlog(true)}
               onMouseLeave={() => setShowBlog(false)}
             >
-              <NavDropdown.Item href="#blog1">Blog 1</NavDropdown.Item>
-              <NavDropdown.Item href="#blog2">Blog 2</NavDropdown.Item>
+              <NavDropdown.Item href="/blog1">Blog 1</NavDropdown.Item>
+              <NavDropdown.Item href="/blog2">Blog 2</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
