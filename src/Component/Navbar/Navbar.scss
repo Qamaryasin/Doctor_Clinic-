@@ -1,0 +1,38 @@
+.containe {
+  background-color: rgb(207, 209, 209);
+}
+
+.navbar-top {
+  font-size: 14px;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+      text-decoration-color: #007bff;
+
+      svg {
+        animation: spin 0.5s linear;
+      }
+    }
+  }
+
+  .left-info span {
+    font-weight: 500;
+  }
+}
+
+// Animation keyframes
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

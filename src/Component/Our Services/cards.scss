@@ -1,0 +1,44 @@
+.card_main {
+    margin: 10% 0% 10% 0%;
+}
+
+.card {
+    height: 100%;
+    background-color: #f1f0f0;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 8px; // Slight rounding by default
+    // width: 25px;
+}
+
+.card:hover {
+    background-color: white;
+    transform: scale(1.01); // Zoom effect
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Optional pop shadow
+    border-radius: 8px; // Keep border-radius consistent
+}
+
+.card-img-top {
+    width: 28%;
+    height: 23%;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-body {
+    margin-bottom: 50px;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 15px;
+    text-align: center;
+}

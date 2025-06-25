@@ -1,0 +1,59 @@
+.Container {
+  margin-top: 10%;
+  background-color: rgb(249, 249, 253);
+}
+
+.swiper {
+  margin: 10px 0px 50px 0px;
+}
+
+.dep_text {
+  padding-top: 50px;
+}
+
+.clinic-card {
+  border: none;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.clinic-card:hover {
+  transform: translateY(-5px);
+}
+
+.clinic-img {
+  width: 100%;
+  height: 250px;
+  /* Adjust as needed */
+  object-fit: cover;
+  margin-top: 0 !important;
+  /* Force-remove margin */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.image-container {
+    position: relative;
+}
+
+.clinic-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.image-container:hover .icon-overlay {
+    opacity: 1;
+}

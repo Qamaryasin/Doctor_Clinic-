@@ -1,0 +1,147 @@
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #000;
+    max-width: 600px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.small-heading {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.appointment-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background: linear-gradient(to right, #0056b3, #00b0d4);
+}
+
+/* Responsive for tablets */
+@media (max-width: 992px) {
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .appointment-btn {
+        font-size: 0.95rem;
+        padding: 9px 18px;
+    }
+}
+
+/* Responsive for small tablets and large phones */
+@media (max-width: 768px) {
+    .banner-text {
+        left: 3%;
+        right: 3%;
+        max-width: 100%;
+        text-align: left;
+        transform: translateY(-50%);
+    }
+
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 500px) {
+    .banner-image {
+        width: 100%;
+        height: 350px;
+        /* Adjust the height to auto for a proportional increase */
+        object-fit: cover;
+        /* Ensure the image covers the container */
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        right: 5%;
+        max-width: 90%;
+        text-align: left;
+        transform: none;
+    }
+
+    .banner-text h1 {
+        font-size: 1.60rem;
+        line-height: 1.3;
+    }
+
+    .small-heading {
+        font-size: 1.0rem;
+    }
+
+    .description {
+        font-size: 1.00rem;
+    }
+
+    .appointment-btn {
+        font-size: 0.85rem;
+        padding: 7px 14px;
+    }
+}
+
+
+//   /* Extra small screens */
+//   @media (max-width: 360px) {
+//     .banner-image {
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover; /* Ensure the image covers the container */
+//       }
+
+//     .banner-text h1 {
+//       font-size: 1.1rem;
+//     }
+
+//     .appointment-btn {
+//       width: 100%;
+//       text-align: center;
+//     }
+//   }

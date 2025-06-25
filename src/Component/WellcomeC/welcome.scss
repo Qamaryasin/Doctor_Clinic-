@@ -1,0 +1,39 @@
+.clinic-welcome {
+  .welcome-box {
+    background: #fff;
+    box-shadow: 0 0 0 10px #f8f8f8;
+    border-radius: 0;
+  }
+
+  .welcome-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+
+    span {
+      color: #111; // darker color for emphasis
+    }
+  }
+
+  .welcome-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #2e7eff, #00e0ff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+  }
+}

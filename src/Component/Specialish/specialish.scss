@@ -1,0 +1,45 @@
+.card-img-top-spec{
+//   height: 100px;
+  object-fit: cover;
+width: 100%;
+height: auto;
+vertical-align: middle;
+    border-style: none;
+    margin-top: 0;
+}
+
+.card h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.card small {
+  font-size: 12px;
+  display: block;
+}
+// .card-body{
+//     background-color: white;
+// }
+// .card-body i {
+// //   color: #888;
+//   transition: color 0.3s ease;
+//   cursor: pointer;
+// }
+.card-header-info{
+    background-color: rgb(250, 250, 250);
+}
+
+.card:hover .card-header-info {
+  background: linear-gradient(90deg, #1c77ff 0%, #00e4ff 100%);
+  color: white;
+}
+.card:hover .card-header-info h5,
+.card:hover .card-header-info small {
+  color: white;
+}
+.icon{
+    color: gray;
+}
+.icon:hover{
+    color: #1c77ff;
+}

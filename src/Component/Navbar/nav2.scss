@@ -1,0 +1,21 @@
+// .navbar {
+//     transition: background-color 0.3s ease;
+//   }
+/* Dropdowns appear below the navbar with spacing */
+.navbar .dropdown-menu {
+    display: none;
+    margin-top: 15px; /* Adjust this value as needed */
+    border-radius: 0;
+    border: none;
+  }
+  
+  /* Show dropdown on hover */
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional: remove hover delay (if present) */
+  .dropdown-menu {
+    transition: none !important;
+  }
+  
