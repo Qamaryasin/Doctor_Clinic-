@@ -85,7 +85,7 @@ export const Footer = () => {
 
                 {/* Bottom Copyright */}
                 <div className="text-center pt-4 mt-4 border-top border-light">
-                    <small>Copyright ©2025 All rights reserved | This template is made with ♡ by Colorlib</small>
+                    <small>Copyright ©2025 All rights reserved | This template is made with ♡ by Qamar Yasin</small>
                 </div>
             </div>
         </footer>
