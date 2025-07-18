@@ -128,20 +128,36 @@
 }
 
 
-//   /* Extra small screens */
-//   @media (max-width: 360px) {
-//     .banner-image {
-//         width: 100%;
-//         height: auto;
-//         object-fit: cover; /* Ensure the image covers the container */
-//       }
 
-//     .banner-text h1 {
-//       font-size: 1.1rem;
-//     }
+.modal-style {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
 
-//     .appointment-btn {
-//       width: 100%;
-//       text-align: center;
-//     }
-//   }
+.modal-style h4 {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.form-link {
+  font-size: 14px;
+  color: #0d6efd;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.modal-style .form-control {
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
+
+.modal-style .btn-lg {
+  font-weight: 600;
+  border-radius: 8px;
+}
