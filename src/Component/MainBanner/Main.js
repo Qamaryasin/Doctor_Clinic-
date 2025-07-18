@@ -240,10 +240,10 @@ export const Main = () => {
                         </Form.Group>
 
                         <div className="d-flex justify-content-between mt-3">
-                            <a onClick={handleRegisterShow} className="form-link">
+                            <a href="#" onClick={handleRegisterShow} className="form-link">
                                 Create account
                             </a>
-                            <a onClick={handleForgotShow} className="form-link">
+                            <a href="#" onClick={handleForgotShow} className="form-link">
                                 Forgot password?
                             </a>
                         </div>
