@@ -238,16 +238,24 @@ export const Main = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter password" />
                         </Form.Group>
-
                         <div className="d-flex justify-content-between mt-3">
-                            <a href="/" onClick={handleRegisterShow} className="form-link">
+                            <Button
+                                variant="link"
+                                onClick={handleRegisterShow}
+                                className="form-link p-0"
+                                style={{ textDecoration: 'none' }}
+                            >
                                 Create account
-                            </a>
-                            <a href="/" onClick={handleForgotShow} className="form-link">
+                            </Button>
+                            <Button
+                                variant="link"
+                                onClick={handleForgotShow}
+                                className="form-link p-0"
+                                style={{ textDecoration: 'none' }}
+                            >
                                 Forgot password?
-                            </a>
+                            </Button>
                         </div>
-
                         <div className="d-grid mt-4">
                             <Button variant="primary" size="lg">
                                 Login
