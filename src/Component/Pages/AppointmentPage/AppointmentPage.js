@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Appointment } from '../../Appointment/Appointment';
 import './appointmentpage.scss'; // Import CSS for styling
 
