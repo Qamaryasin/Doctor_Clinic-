@@ -2,108 +2,10 @@ import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './doctorpage.scss';
-
-const doctorData = [
-  {
-    id: 1,
-    name: "Dr. Jacob Jones",
-    specialization: "Cardiologist",
-    rating: 4.5,
-    reviews: 100,
-    hospital: "Example Hospital, New York",
-    experience: "10 years experience",
-    languages: "English, Spanish",
-    image: "/Image/doctor1.jpg",
-  },
-  {
-    id: 2,
-    name: "Dr. Sarah Smith",
-    specialization: "Neurologist",
-    rating: 4.7,
-    reviews: 120,
-    hospital: "HealthCare Center, LA",
-    experience: "8 years experience",
-    languages: "English, French",
-    image: "/Image/doctor2.jpg",
-  },
-  {
-    id: 3,
-    name: "Dr. Alex Brown",
-    specialization: "Dermatologist",
-    rating: 4.6,
-    reviews: 95,
-    hospital: "City Clinic, Chicago",
-    experience: "9 years experience",
-    languages: "English",
-    image: "/Image/doctor3.jpg",
-  },
-  {
-    id: 4,
-    name: "Dr. Emily White",
-    specialization: "Pediatrician",
-    rating: 4.8,
-    reviews: 150,
-    hospital: "Children's Hospital, Boston",
-    experience: "11 years experience",
-    languages: "English, Spanish",
-    image: "/Image/doctor4.jpg",
-  },
-  {
-    id: 5,
-    name: "Dr. John Lee",
-    specialization: "Orthopedic Surgeon",
-    rating: 4.3,
-    reviews: 80,
-    hospital: "OrthoCare, Miami",
-    experience: "12 years experience",
-    languages: "English, Korean",
-    image: "/Image/doctor2.jpg",
-  },
-  {
-    id: 6,
-    name: "Dr. Olivia Green",
-    specialization: "Gynecologist",
-    rating: 4.4,
-    reviews: 90,
-    hospital: "Women's Health Center, Seattle",
-    experience: "7 years experience",
-    languages: "English",
-    image: "/Image/doctor4.jpg",
-  },
-  {
-    id: 7,
-    name: "Dr. Michael Scott",
-    specialization: "Psychiatrist",
-    rating: 4.9,
-    reviews: 130,
-    hospital: "Mind Wellness, Denver",
-    experience: "13 years experience",
-    languages: "English",
-    image: "/Image/doctor2.jpg",
-  },
-  {
-    id: 8,
-    name: "Dr. Lisa Ray",
-    specialization: "Oncologist",
-    rating: 4.2,
-    reviews: 70,
-    hospital: "Cancer Care, Houston",
-    experience: "6 years experience",
-    languages: "English, Spanish",
-    image: "/Image/doctor3.jpg",
-  },
-  {
-    id: 9,
-    name: "Dr. Kevin Young",
-    specialization: "Urologist",
-    rating: 4.5,
-    reviews: 110,
-    hospital: "UroCare Center, Dallas",
-    experience: "10 years experience",
-    languages: "English, German",
-    image: "/Image/doctor4.jpg",
-  },
-];
+import DoctorDetails from '../../Doctordetails/Ddetails';
+// import { doctorData } from "./doctorData";
+import { doctorData } from "../../data/doctorData";
+import { useNavigate } from "react-router-dom";
 
 const DoctorCards = () => {
   const [search, setSearch] = useState('');
@@ -113,7 +15,7 @@ const DoctorCards = () => {
   const handleSearchChange = (e) => setSearch(e.target.value);
   const handleFilterChange = (e) => setFilter(e.target.value);
   const handleSortChange = (e) => setSort(e.target.value);
-    const handleRefresh = () => {
+  const handleRefresh = () => {
     setSearch("");
     setFilter("");
     setSort("");
@@ -135,6 +37,11 @@ const DoctorCards = () => {
       }
       return 0;
     });
+  const navigate = useNavigate();
+
+  const handleViewProfile = (id) => {
+    navigate(`/DoctorDetails/${id}`);
+  };
 
   return (
     <>
@@ -149,52 +56,52 @@ const DoctorCards = () => {
       </div>
 
       {/* Search, Filter, Sort Section */}
-   <div className="container py-4">
-  <h2 className="mb-4 text-center">Find a Doctor</h2>
+      <div className="container py-4">
+        <h2 className="mb-4 text-center">Find a Doctor</h2>
 
-  <div className="row gy-2 gx-3 align-items-center">
-    <div className="col-12 col-md-6 col-lg-4">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Search doctors..."
-        value={search}
-        onChange={handleSearchChange}
-      />
-    </div>
+        <div className="row gy-2 gx-3 align-items-center">
+          <div className="col-12 col-md-6 col-lg-4">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search doctors..."
+              value={search}
+              onChange={handleSearchChange}
+            />
+          </div>
 
-    <div className="col-12 col-md-3 col-lg-3">
-      <select
-        className="form-select"
-        value={filter}
-        onChange={handleFilterChange}
-      >
-        <option value="">Filter by Specialization</option>
-        {[...new Set(doctorData.map((d) => d.specialization))].map((spec) => (
-          <option key={spec} value={spec}>{spec}</option>
-        ))}
-      </select>
-    </div>
+          <div className="col-12 col-md-3 col-lg-3">
+            <select
+              className="form-select"
+              value={filter}
+              onChange={handleFilterChange}
+            >
+              <option value="">Filter by Specialization</option>
+              {[...new Set(doctorData.map((d) => d.specialization))].map((spec) => (
+                <option key={spec} value={spec}>{spec}</option>
+              ))}
+            </select>
+          </div>
 
-    <div className="col-10 col-md-2 col-lg-3">
-      <select
-        className="form-select"
-        value={sort}
-        onChange={handleSortChange}
-      >
-        <option value="">Sort by</option>
-        <option value="rating">Rating</option>
-        <option value="experience">Experience</option>
-      </select>
-    </div>
+          <div className="col-10 col-md-2 col-lg-3">
+            <select
+              className="form-select"
+              value={sort}
+              onChange={handleSortChange}
+            >
+              <option value="">Sort by</option>
+              <option value="rating">Rating</option>
+              <option value="experience">Experience</option>
+            </select>
+          </div>
 
-                <div className="col-md-2 text-md-end">
-          <button className="btn btn-outline-secondary w-100 mt-2" onClick={handleRefresh}>
-            <i className="bi bi-arrow-clockwise me-2"></i>Refresh
-          </button>
+          <div className="col-md-2 text-md-end">
+            <button className="btn btn-outline-secondary w-100 mt-2" onClick={handleRefresh}>
+              <i className="bi bi-arrow-clockwise me-2"></i>Refresh
+            </button>
+          </div>
         </div>
-  </div>
-</div>
+      </div>
 
 
       {/* Doctor Cards */}
@@ -211,7 +118,12 @@ const DoctorCards = () => {
                     className="img-fluid rounded"
                     style={{ width: '200px', height: '200px', objectFit: 'cover' }}
                   />
-                  <button className="btn btn-outline-dark w-100 mt-3">View Profile</button>
+                  <button
+                    className="btn btn-outline-dark w-100 mt-3"
+                    onClick={() => handleViewProfile(doc.id)}
+                  >
+                    View Profile
+                  </button>
                 </div>
                 <div className="flex-grow-1 text-center text-md-start">
                   <h5 className="fw-bold fs-5">{doc.name}</h5>

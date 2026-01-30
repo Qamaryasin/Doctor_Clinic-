@@ -18,6 +18,7 @@ import { Appointment } from './Component/Appointment/Appointment';
 import { Specialish } from './Component/Specialish/Specialish';
 import { Hotline } from './Component/Hotline/Hotline';
 import { News } from './Component/Medical_news/News';
+import DoctorDetails from './Component/Doctordetails/Ddetails';
 
 
 function Home() {
@@ -47,6 +48,9 @@ function App() {
           <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/doctors" element={<DoctorsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/DoctorDetails/:id" element={<DoctorDetails />} />
+
+
         </Routes>
 
         <Footer />
